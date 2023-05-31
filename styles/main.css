@@ -72,6 +72,19 @@
     height: 70px;
     background-color: rgba(127, 140, 141, 0.5);
 }
+.nav-outer ul {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    margin-right: 10%;
+}
+.nav-outer > ul > li {
+    color: yellow;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
 
 /*nav bar end*/
 /*main slider start*/
