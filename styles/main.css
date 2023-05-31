@@ -1,0 +1,258 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*top bar start*/
+.top-outer {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(52, 73, 94, 0.2);
+}
+
+.top-inner {
+    display: flex;
+    height: 100%;
+}
+
+.top-element {
+    flex: 1;
+}
+
+.top-left > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.top-left > ul > li {
+    color: white;
+    font-size: 15px;
+    height: 100%;
+    display: flex;
+    margin-right: 15px;
+    align-items: center;
+}
+
+.top-left > ul > li span:hover {
+    cursor: pointer;
+}
+
+.top-right ul {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.top-right ul li {
+    color: white;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.top-right > ul > li:last-child {
+    margin-right: 0;
+}
+
+.top-right ul li:hover {
+    color: #c0392b;
+    cursor: pointer;
+
+}
+
+/*top bar end*/
+
+/*nav bar start*/
+.nav-outer {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(127, 140, 141, 0.5);
+}
+
+/*nav bar end*/
+/*main slider start*/
+.slider {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    top: -110px;
+    z-index: -1;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: none;
+    left: 0;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/*main slider end*/
+
+/*solutions start*/
+.solution-main-outer {
+    width: 100%;
+    height: auto;
+    background-image: url("https://preview.colorlib.com/theme/eroo/images/use_your_illusion.png.webp");
+}
+
+.inner-wrap {
+    width: 100%;
+    height: 280px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    transition: all 1s;
+    background-color: rgba(52, 73, 94, 1.0);
+    color: orange;
+}
+
+.inner-wrap-element {
+    flex: 1;
+    display: flex;
+    padding: 10px;
+}
+
+.inner:hover {
+    background-color: rgba(211, 84, 0, 1.0);
+    cursor: pointer;
+    color: white;
+}
+
+.inner > .inner-wrap-element:first-child {
+    justify-content: flex-end;
+}
+
+.inner-wrap-element > i {
+    font-size: 50px;
+}
+
+.movable-element {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(211, 84, 0, 1.0);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -20px;
+    background-color: rgba(52, 73, 94, 1.0);
+    right: 100px;
+    transition: all 1s;
+    /*   display: none;*/
+}
+
+.inner:hover .movable-element {
+    transform: translateX(50px);
+    display: flex;
+}
+
+/*solutions end*/
+.bg-outer {
+    width: 100%;
+    height: 300px;
+    background-image: url("https://img.lovepik.com/background/20211021/large/lovepik-blue-technology-background-image_400163397.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.team-item-outer {
+    width: 260px;
+    height: 400px;
+    background-image: url("https://www.paldesk.com/wp-content/uploads/2020/10/live-chat-agent.png");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+.element {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(52, 73, 94, 0.5);
+    position: absolute;
+    transition: all 0.3s linear;
+}
+
+.top-element {
+    top: -200px;
+}
+
+.bottom-element {
+    bottom: -200px;
+}
+
+.team-item-outer:hover .bottom-element{
+    bottom: 0;
+}
+
+.team-item-outer:hover .top-element{
+    top: 0;
+}
+.data-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.team-item-outer:hover .data-wrapper{
+    display: flex;
+}
+.name{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+.designation{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+.social-icon-wrapper{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icon-wrapper>ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.social-icon-wrapper>ul>li{
+    margin-right: 15px;
+    color: white;
+}
+.social-icon-wrapper>ul>li:last-child{
+    margin: 0;
+}
+
+@media (max-width: 1000px) {
+    .top-outer {
+        display: none;
+    }
+}
