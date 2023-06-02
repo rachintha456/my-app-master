@@ -38,6 +38,7 @@
 
 .top-left > ul > li span:hover {
     cursor: pointer;
+    /*color: blue;*/
 }
 
 .top-right ul {
@@ -61,7 +62,6 @@
 .top-right ul li:hover {
     color: #c0392b;
     cursor: pointer;
-
 }
 
 /*top bar end*/
@@ -71,19 +71,57 @@
     width: 100%;
     height: 70px;
     background-color: rgba(127, 140, 141, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
-.nav-outer ul {
+
+.nav-inner {
+    display: flex;
+    height: 100%;
+}
+
+.nav-element {
+    flex: 1;
+}
+
+.nav-left > img {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-right > ul {
     list-style: none;
     display: flex;
     height: 100%;
     justify-content: flex-end;
-    margin-right: 10%;
 }
-.nav-outer > ul > li {
-    color: yellow;
-    margin-right: 30px;
+
+.nav-right > ul > li {
+    color: white;
+    margin-right: 35px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+}
+
+.nav-right > ul > li:first-child:hover {
+    color: white;
+}
+
+.nav-right > ul > li:last-child {
+    margin-right: 0;
+}
+
+.nav-right > ul > li:first-child {
+    color: yellow;
+}
+
+.nav-link {
+    display: block;
 }
 
 /*nav bar end*/
@@ -93,7 +131,7 @@
     height: 100vh;
     overflow: hidden;
     position: relative;
-    top: -110px;
+    /*top: -110px;*/
     z-index: -1;
 }
 
@@ -110,7 +148,60 @@
     opacity: 1;
 }
 
-/*main slider end*/
+.top-outer {
+    width: 100%;
+    height: 40px;
+}
+
+.box-outer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.box-left{
+    justify-content: center;
+    margin-top: 50px;
+    width: 60%;
+}
+
+/*.box-element {*/
+/*    flex: 1;*/
+/*}*/
+
+.box-left > h1 {
+    color: #fff;
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.box-left > p {
+    color: white;
+    font-size: medium;
+    font-weight: 400;
+    width: 70%;
+}
+.btn {
+    text-transform: uppercase!important;
+    font-size: small!important;
+    font-weight: 800!important;
+    border: none!important;
+    padding: 15px 20px!important;
+}
+.btn:hover{
+    cursor: pointer!important;
+}
+.btn-primary{
+   background-color: #cdb30c!important;
+    color: white!important;
+}
+.btn-secondary{
+    background-color: white!important;
+    color: black!important;
+}
 
 /*solutions start*/
 .solution-main-outer {
@@ -124,6 +215,7 @@
     height: 280px;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .inner {
@@ -134,12 +226,16 @@
     transition: all 1s;
     background-color: rgba(52, 73, 94, 1.0);
     color: orange;
+    font-weight: 800;
+    font-size: 20px;
+    padding-left: 20px;
 }
 
 .inner-wrap-element {
     flex: 1;
     display: flex;
     padding: 10px;
+    z-index: 1;
 }
 
 .inner:hover {
@@ -169,12 +265,33 @@
     background-color: rgba(52, 73, 94, 1.0);
     right: 100px;
     transition: all 1s;
-    /*   display: none;*/
+    /*display: none;*/
 }
 
 .inner:hover .movable-element {
     transform: translateX(50px);
     display: flex;
+}
+.content-left{
+    justify-content: center;
+    margin-top: 50px;
+    width: 50%;
+    padding: 0;
+}
+.content-left > h2 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+    width: 70%;
+}
+.content-left > p {
+    color: white;
+    font-size: medium;
+    font-weight: 400;
+    width: 80%;
 }
 
 /*solutions end*/
@@ -186,6 +303,25 @@
     background-attachment: fixed;
     background-size: cover;
 }
+.icon-outer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(127, 140, 141, 0.5);
+    z-index: 1;
+    border: 1px solid red;
+}
+.icon-inner {
+    display: flex;
+    height: 100%;
+    border: 1px solid red;
+}
+.icon-element {
+    flex: 1;
+}
+.icon-right {
+    border: 1px solid red;
+}
+
 
 .team-item-outer {
     width: 260px;
@@ -213,14 +349,15 @@
     bottom: -200px;
 }
 
-.team-item-outer:hover .bottom-element{
+.team-item-outer:hover .bottom-element {
     bottom: 0;
 }
 
-.team-item-outer:hover .top-element{
+.team-item-outer:hover .top-element {
     top: 0;
 }
-.data-wrapper{
+
+.data-wrapper {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -230,37 +367,44 @@
     align-items: center;
     z-index: 1;
 }
-.team-item-outer:hover .data-wrapper{
+
+.team-item-outer:hover .data-wrapper {
     display: flex;
 }
-.name{
+
+.name {
     color: white;
     font-size: 25px;
     font-weight: 600;
 }
-.designation{
+
+.designation {
     color: white;
     font-size: 18px;
     font-weight: 500;
 }
-.social-icon-wrapper{
+
+.social-icon-wrapper {
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.social-icon-wrapper>ul{
+
+.social-icon-wrapper > ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.social-icon-wrapper>ul>li{
+
+.social-icon-wrapper > ul > li {
     margin-right: 15px;
     color: white;
 }
-.social-icon-wrapper>ul>li:last-child{
+
+.social-icon-wrapper > ul > li:last-child {
     margin: 0;
 }
 
